@@ -1,0 +1,60 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+   - rubocop-rails
+   - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - "tmp/**/*"
+    - "config/initializers/*"
+    - "vendor/**/*"
+    - "db/schema.rb"
+    - "node_modules/**/*"
+    - "db/migrate/*.rb"
+    - "bin/*"
+  DisplayCopNames: true
+  TargetRubyVersion: 2.6.0
+
+Rails:
+  Enabled: true
+
+Style/AndOr:
+  EnforcedStyle: conditionals
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Lint/ShadowedException:
+  Enabled: false
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
